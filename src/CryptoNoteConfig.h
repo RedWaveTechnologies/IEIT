@@ -25,8 +25,8 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 //TODO ((uint64_t)(-1)) equals to 18446744073709551616 coins
 //TODO or you can define number explicitly UINT64_C(858986905600000000)
 const uint64_t MONEY_SUPPLY                                  = UINT64_C(792100000000000000);
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(237630000000000000);
-const unsigned EMISSION_SPEED_FACTOR                         = 20;
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(200000000000000000);
+const unsigned EMISSION_SPEED_FACTOR                         = 19;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 //TODO Define number of blocks for block size median calculation
@@ -36,11 +36,11 @@ const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 //TODO Define number of digits
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 8;
 //TODO Define minimum fee for transactions
-const uint64_t MINIMUM_FEE                                   = 10000;
+const uint64_t MINIMUM_FEE                                   = 100000;
 const uint64_t DEFAULT_DUST_THRESHOLD                        = MINIMUM_FEE;
 
 //TODO Define preferred block's target time
-const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 240; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 //TODO There are options to tune CryptoNote's difficulty retargeting function.
 //TODO We recommend not to change it.
@@ -75,7 +75,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "ieit_conf.json";
 
 //TODO Put here the name of your currency
 const char     CRYPTONOTE_NAME[]                             = "IEIT";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001e99ab08dfe15029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101d2307eceb0594ac1d0b647265be7d94e87e1cd0e6ec94d3f3d699623bdee2138";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001d2b5e09afc2b029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121014960695da2d5ebb2a55475cc2252d3e363e387a954ae06cdf5191ce6d29fe434";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
