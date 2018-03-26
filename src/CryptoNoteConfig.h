@@ -14,7 +14,7 @@ const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 //TODO Currency-specific address prefix
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0xe3;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0xfb;
 //TODO Choose maturity period for your currency
 const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 60;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
@@ -24,7 +24,8 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 //TODO Specify total number of available coins
 //TODO ((uint64_t)(-1)) equals to 18446744073709551616 coins
 //TODO or you can define number explicitly UINT64_C(858986905600000000)
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(7921000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(792100000000000000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(237630000000000000);
 const unsigned EMISSION_SPEED_FACTOR                         = 20;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -69,12 +70,12 @@ const char     CRYPTONOTE_BLOCKSCACHE_FILENAME[]             = "blockscache.dat"
 const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.bin";
 const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     CRYPTONOTE_BLOCKCHAIN_INDICES_FILENAME[]      = "blockchainindices.dat";
-const char     MINER_CONFIG_FILE_NAME[]                      = "cyberlogic_conf.json";
+const char     MINER_CONFIG_FILE_NAME[]                      = "ieit_conf.json";
 } // parameters
 
 //TODO Put here the name of your currency
 const char     CRYPTONOTE_NAME[]                             = "IEIT";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001823b029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210188f4130ab7678a264bb11d0a81db48e4a78538d344011724c8b5a68c1757e00a";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001e99ab08dfe15029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101d2307eceb0594ac1d0b647265be7d94e87e1cd0e6ec94d3f3d699623bdee2138";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
